@@ -24,7 +24,7 @@ function Search(props) {
           PLEASE ENTER THE MAIN INGREDIENT OF YOUR DISH:
         </Typography>
       </Box>
-      <Container sx={{ width: '50%', justifyContent: 'center', alignItems: 'center' }}>
+      <Container sx={{ pb: 1, width: '50%', justifyContent: 'center', alignItems: 'center' }}>
         <TextField
           // label="Main Ingredient"
           size="medium"
@@ -34,11 +34,13 @@ function Search(props) {
           sx={{ width: '100%', justifyContent: 'center' }}
         />
       </Container>
-      <Box textAlign='center'>
-        <Button onClick={props.handleSubmit} size="large">
+      {/* <Box textAlign='center'> */}
+      <Container sx={{ width: '50%', justifyContent: 'center', alignItems: 'center' }}>
+        <Button variant="contained" onClick={props.handleSubmit} size="large" sx={{ width: '100%' }}>
           SEARCH
         </Button>
-      </Box>
+      </Container>
+      {/* </Box> */}
     </Container>
   )
 }

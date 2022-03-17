@@ -20,21 +20,21 @@ function Recipe(props) {
           >
             <Grid item xs={4} sm={4} md={4} alignItems="center" justifyContent="center">
               <Container sx={{ bgcolor: 'background.main', height: '75vh' }}>
-                <Button onClick={props.handleClick} sx={{ color: 'primary.dark ' }}>
+                <Button onClick={props.handleClick}>
                   {'< GO BACK'}
                 </Button>
-                <Box sx={{ width: '100%' }}>
+                <Box sx={{ width: '100%', pt: 1 }}>
                   <Typography align="center" variant="h3" color="secondary.main" fontWeight="500">
                     {props.recipe.title}
                   </Typography>
                 </Box>
                 <Box
                   component="img"
-                  sx={{ width: '100%' }}
+                  sx={{ width: '100%', pb: 1 }}
                   alt="Recipe"
                   src={props.recipe.image}
                 />
-                <Box>
+                <Box sx={{ pb: 1 }}>
                   <Box sx={{ width: '100%' }}>
                     <Typography align="center" variant="h5" color="primary.dark">
                       INGREDIENTS
@@ -42,7 +42,7 @@ function Recipe(props) {
                   </Box>
                   {props.recipe.extendedIngredients.map((ingredient) => (
                     <Box>
-                      <Typography variant="subtitle1" color="primary.dark">
+                      <Typography variant="subtitle2" color="primary.dark">
                         {ingredient.original}
                       </Typography>
                     </Box>
@@ -56,12 +56,12 @@ function Recipe(props) {
                   >
                     <Box sx={{ width: '33%' }}>
                       <Box>
-                        <Typography align="center" variant="h6" color="primary.main">
+                        <Typography align="center" variant="subtitle1" color="primary.main">
                           Protein
                         </Typography>
                       </Box>
                       <Box>
-                        <Typography align="center" variant="subtitle1" color="primary.dark">
+                        <Typography align="center" variant="subtitle2" color="primary.dark">
                           {`${Math.floor(props.recipe.nutrition.nutrients[8].amount)}g`}
                         </Typography>
                       </Box>
@@ -71,31 +71,31 @@ function Recipe(props) {
                     }}
                     >
                       <Box>
-                        <Typography align="center" variant="h6" color="primary.main">
+                        <Typography align="center" variant="subtitle1" color="primary.main">
                           Carbs
                         </Typography>
                       </Box>
                       <Box>
-                        <Typography align="center" variant="subtitle1" color="primary.dark">
+                        <Typography align="center" variant="subtitle2" color="primary.dark">
                           {`${Math.floor(props.recipe.nutrition.nutrients[3].amount)}g`}
                         </Typography>
                       </Box>
                     </Box>
                     <Box sx={{ width: '33%' }}>
                       <Box>
-                        <Typography align="center" variant="h6" color="primary.main">
+                        <Typography align="center" variant="subtitle1" color="primary.main">
                           Fats
                         </Typography>
                       </Box>
                       <Box>
-                        <Typography align="center" variant="subtitle1" color="primary.dark">
+                        <Typography align="center" variant="subtitle2" color="primary.dark">
                           {`${Math.floor(props.recipe.nutrition.nutrients[1].amount)}g`}
                         </Typography>
                       </Box>
                     </Box>
                   </Grid>
                   <Box sx={{ width: '100%', borderTop: 2, borderColor: 'primary.light' }}>
-                    <Typography align="center" variant="h5" fontWeight="700" fontFamily="Lekton" color="primary.dark">
+                    <Typography align="center" variant="h6" fontWeight="700" fontFamily="Lekton" color="primary.dark">
                       {`${Math.floor(props.recipe.nutrition.nutrients[0].amount)} kcal`}
                     </Typography>
                   </Box>
@@ -110,8 +110,8 @@ function Recipe(props) {
                   </Button>
                 </Box>
                 <Box>
-                  <Box sx={{ width: '100%' }}>
-                    <Typography align="center" variant="h3" color="primary.dark">
+                  <Box sx={{ width: '100%', pt: 1 }}>
+                    <Typography align="center" variant="h4" color="primary.dark">
                       DIRECTIONS
                     </Typography>
                   </Box>
