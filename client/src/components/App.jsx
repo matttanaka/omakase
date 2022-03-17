@@ -5,11 +5,29 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../materialdesigntheme.js';
+import sampleData from '../sampleSearch.js';
 import Recipe from './Recipe.jsx';
+import Search from './Search.jsx';
 
 function App() {
   const [mainIngredient, setMainIngredient] = useState('');
   const [showRecipe, setShowRecipe] = useState(false);
+  const [recipeResults, setRecipeResults] = useState(null);
+  const [randIdx, setRandIdx] = useState(null);
+  const [singleRecipe, setSingleRecipe] = useState(null);
+
+  const handleChange = (e) => {
+    setMainIngredient(e.target.value);
+  };
+
+  const createNewIndex = () => {
+    const newIdx = Math.floor(Math.random() * (recipeResults.length - 1));
+    setSingleRecipe(recipeResults[newIdx]);
+  }
+
+  const handleClick = () => {
+    setShowRecipe(!showRecipe);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,34 +37,34 @@ function App() {
         search: mainIngredient,
       },
     })
-      .then((response) => console.log(response))
+      .then((response) => {
+        setRecipeResults(response.data.results);
+        const randomIdx = Math.floor(Math.random() * (response.data.results.length - 1));
+        console.log(randomIdx);
+        setRandIdx(randomIdx);
+        setSingleRecipe(response.data.results[randomIdx]);
+      })
       .catch((error) => console.log(error));
   };
 
   return (
     <ThemeProvider theme={theme}>
       <Typography>
-        <Container sx={{ bgcolor: 'primary.main' }}>
-          <Container>
-            <h1>OMAKASE</h1>
-            <form onSubmit={handleSubmit} sx={{ height: '100vh' }}>
-              <input
-                name="mainIngr"
-                type="text"
-                placeholder="Main Ingredient"
-                value={mainIngredient}
-                onChange={(e) => setMainIngredient(e.target.value)}
-              />
-              <input
-                type="submit"
-                value="Submit"
-              />
-            </form>
-          </Container>
-          {/* <Container> */}
-            <Recipe />
-          {/* </Container> */}
-        </Container>
+        {!showRecipe && (
+          <Search
+            handleChange={handleChange}
+            mainIngredient={mainIngredient}
+            handleSubmit={handleSubmit}
+          />
+        )}
+        {showRecipe && (
+          <Recipe
+            recipe={singleRecipe}
+            // recipe={sampleData.results[0]}
+            handleClick={handleClick}
+            createNewIndex={createNewIndex}
+          />
+        )}
       </Typography>
     </ThemeProvider>
   );

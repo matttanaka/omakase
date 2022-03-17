@@ -5,13 +5,16 @@ const { API_KEY } = process.env;
 const { RECIPES_URL } = process.env;
 
 module.exports = {
-  getRecipesByIngredients: (req, res) => {
-    axios.get(`${RECIPES_URL}/findByIngredients`, {
+  getRecipes: (req, res) => {
+    axios.get(`${RECIPES_URL}/complexSearch`, {
       params: {
-        ingredients: req.query.search,
+        includeIngredients: req.query.search,
         number: 100,
+        addRecipeInformation: true,
+        addRecipeNutrition: true,
         ignorePantry: true,
         apiKey: API_KEY,
+        fillIngredients: true,
       },
     })
       .then((response) => res.status(200).send(response.data))
