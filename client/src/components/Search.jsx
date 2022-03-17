@@ -8,7 +8,7 @@ import Recipe from './Recipe.jsx';
 
 function Search(props) {
   return (
-    <Container sx={{ bgcolor: '#F0F0F0', width: '100%', pt: 4 }}>
+    <Container sx={{ bgcolor: 'background.main', width: '100%', pt: 4 }}>
       <Box sx={{ pb: 3 }}>
         <Typography align="center" variant="h1" color="primary.dark">
           OMAKASE
@@ -26,7 +26,7 @@ function Search(props) {
       </Box>
       <Container sx={{ width: '50%', justifyContent: 'center', alignItems: 'center' }}>
         <TextField
-          label="Main Ingredient"
+          // label="Main Ingredient"
           size="medium"
           value={props.mainIngredient}
           onChange={props.handleChange}
