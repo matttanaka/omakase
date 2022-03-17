@@ -1,3 +1,11 @@
 #app {
-  font-family: 'StyreneA-Regular-Web',sans-serif;
+  /* font-family: 'StyreneA-Regular-Web',sans-serif; */
+}
+
+body {
+  background: #FFFBE6;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Roboto', sans-serif; */
 }
