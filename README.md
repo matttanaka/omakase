@@ -44,3 +44,7 @@ RECIPES_URL=https://api.spoonacular.com/recipes
 ```
 npm start
 ```
+
+## Contact
+To contribute or ask any questions reach out to:
+* [Matthew Tanaka](https://github.com/matttanaka)
