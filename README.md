@@ -1,6 +1,10 @@
 # Omakase
 
-Quickly select a recipe based on ingredients you already have and let Omakase help you make your meal prep a breeze!
+Quickly select a recipe based on a main ingredient and make your meal prep a breeze! 
+
+Omakase streamlines meal prep by displaying a single recipe based on the user-provided main ingredient and only showing essential information like ingredients, direction, and macronutrients for each recipe. Recipes are pulled from a large database provided by the Spoonacular API. 
+
+This project was built as part of a coding to challenge to create a minimum viable product in under 48 hours.
 
 ## Tech stack
 ![image](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
