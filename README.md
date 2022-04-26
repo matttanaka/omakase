@@ -8,6 +8,11 @@ Quickly select a recipe based on ingredients you already have and let Omakase he
 ![image](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
 
 ## Overview
+
+- Generate single random recipe based on main ingredient search 
+- View ingredients list, directions, and macronutrient information for each recipe
+- Ask for another recipe suggestion with same main ingredient if not satisfied with current recipe
+
 ![image](/screenshots/omakasedemo.gif)
 
 ## Installation/Setup
