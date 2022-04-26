@@ -12,6 +12,7 @@ Quickly select a recipe based on ingredients you already have and let Omakase he
 - Generate single random recipe based on main ingredient search 
 - View ingredients list, directions, and macronutrient information for each recipe
 - Ask for another recipe suggestion with same main ingredient if not satisfied with current recipe
+- Return to main page to initiate new recipe search based on a different main ingredient
 
 ![image](/screenshots/omakasedemo.gif)
 
