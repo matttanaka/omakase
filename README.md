@@ -17,17 +17,19 @@ Quickly select a recipe based on ingredients you already have and let Omakase he
 ```
 npm install
 ```
-3. Set up Spoonacular Credentials
 
+#### 3. Set up Spoonacular Credentials
+  - Make an account with the [Spoonacular API](https://spoonacular.com/food-api)
+  - Take note of your API key
 
-3. Run server on local environment
-```
-npm start
-```
-4. Create a .env file in the root directory. Within the file, include the following database parameters:
+#### 4. Create a .env file in the root directory. Within the file, enter your newly created API key along and computer port:
 ```
 API_KEY=
 PORT=
 RECIPES_URL=https://api.spoonacular.com/recipes
 ```
-To obtainMore information on obtaining a Spoonacular API Key can be found [here]()
+
+#### 5. Run server on local environment
+```
+npm start
+```
