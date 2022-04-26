@@ -11,9 +11,9 @@ Quickly select a recipe based on ingredients you already have and let Omakase he
 ![image](/screenshots/omakasedemo.gif)
 
 ## Installation/Setup
-1. Fork and Clone this repo.
+#### 1. Fork and Clone this repo.
 
-2. Install dependences
+#### 2. Install dependences
 ```
 npm install
 ```
