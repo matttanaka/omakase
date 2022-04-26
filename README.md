@@ -1,4 +1,5 @@
 # Omakase
+
 Quickly select a recipe based on ingredients you already have and let Omakase help you make your meal prep a breeze!
 
 ## Tech stack
@@ -7,7 +8,7 @@ Quickly select a recipe based on ingredients you already have and let Omakase he
 ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![image](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
 
-## Overview
+## Features
 
 - Generate single random recipe based on main ingredient search 
 - View ingredients list, directions, and macronutrient information for each recipe
